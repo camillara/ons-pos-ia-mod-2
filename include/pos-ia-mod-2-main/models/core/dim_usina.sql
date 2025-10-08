@@ -10,7 +10,7 @@ with usinas_base as (
         NOM_SUBSISTEMA as nom_subsistema, 
         ID_ESTADO as id_estado, 
         NOM_TIPOCOMBUSTIVEL as nom_tipocombustivel
-    from {{ source('raw_ons', 'DISPONIBILIDADE_USINA_GERAL') }}
+    from {{ ref('stg_disponibilidade_usina') }}
     where NOM_USINA is not null
 )
 

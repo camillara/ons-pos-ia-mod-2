@@ -1,0 +1,374 @@
+version: 2
+
+models:
+
+  # ============ DIMENSÕES ============
+
+  - name: dim_data
+    description: "Dimensão de calendário."
+    columns:
+      - name: sk_data
+        tests: [not_null, unique]
+      - name: data_completa
+        tests: [not_null, unique]
+      - name: ano
+      - name: mes
+      - name: dia
+      - name: dia_semana_num
+      - name: dia_do_ano
+      - name: semana_do_ano
+      - name: trimestre
+      - name: quinzena
+      - name: nome_mes
+      - name: nome_dia_semana
+      - name: tipo_dia
+      - name: estacao_ano
+      - name: periodo_hidrologico
+      - name: ano_mes
+      - name: is_final_semana
+
+  - name: dim_estacao_meteorologica
+    description: "Dimensão de estações do INMET."
+    columns:
+      - name: sk_estacao
+        tests: [not_null, unique]
+      - name: codigo_estacao
+        tests: [not_null]
+      - name: regiao
+      - name: uf
+      - name: nome_estado
+      - name: subsistema_eletrico
+
+  - name: dim_subsistema
+    description: "Dimensão de subsistemas elétricos."
+    columns:
+      - name: sk_subsistema
+        tests: [not_null, unique]
+      - name: id_subsistema
+        tests: [not_null, unique]
+      - name: nom_subsistema
+        tests: [not_null]
+      - name: nome_subsistema_completo
+      - name: regiao_geografica
+      - name: perfil_energetico
+      - name: estados_principais
+
+  - name: dim_tipo_combustivel
+    description: "Dimensão de tipos de combustível/fonte."
+    columns:
+      - name: sk_tipo_combustivel
+        tests: [not_null, unique]
+      - name: nom_tipocombustivel
+        tests: [not_null]
+      - name: nome_tipo_combustivel_padronizado
+      - name: fonte_energetica
+      - name: classificacao_renovavel
+
+  - name: dim_usina
+    description: "Dimensão de usinas."
+    columns:
+      - name: sk_usina
+        tests: [not_null, unique]
+      - name: nome_usina
+        tests: [not_null]
+      - name: id_subsistema
+      - name: nom_subsistema
+      - name: id_estado
+      - name: nom_tipocombustivel
+      - name: tipo_usina
+
+  # ============== FATOS ==============
+
+  - name: fato_balanco_energetico_diario
+    description: "Balanço energético diário por subsistema."
+    columns:
+      - name: sk_fato_balanco
+        tests: [not_null, unique]
+      - name: data_referencia
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: id_subsistema
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_subsistema')
+              field: id_subsistema
+              severity: warn
+      - name: nom_subsistema
+      - name: ger_hidraulica_mwh_dia
+      - name: ger_termica_mwh_dia
+      - name: ger_eolica_mwh_dia
+      - name: ger_solar_mwh_dia
+      - name: carga_mwh_dia
+      - name: intercambio_mw_medio_dia
+      - name: total_geracao_mwh_dia
+      - name: deficit_superavit_mwh_dia
+      - name: pct_ger_hidraulica
+      - name: pct_ger_termica
+      - name: pct_ger_eolica
+      - name: pct_ger_solar
+      - name: num_registros_horarios
+      - name: status_qualidade_dados
+
+  - name: fato_clima_diario
+    description: "Clima diário agregado por estação."
+    columns:
+      - name: sk_fato_clima
+        tests: [not_null, unique]
+      - name: data_referencia
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: estacao
+        tests:
+          - relationships:
+              to: ref('dim_estacao_meteorologica')
+              field: codigo_estacao
+              severity: warn
+      - name: regiao
+      - name: uf
+      - name: temperatura_media_dia_c
+      - name: temperatura_maxima_dia_c
+      - name: temperatura_minima_dia_c
+      - name: amplitude_termica_dia_c
+      - name: precipitacao_total_dia_mm
+      - name: pct_horas_com_chuva
+      - name: umidade_relativa_media_dia_pct
+      - name: vento_velocidade_media_dia_ms
+      - name: pressao_atmosferica_media_mb
+      - name: radiacao_global_media_kj_m2
+      - name: temp_maxima_media_7d
+      - name: precipitacao_acumulada_7d
+      - name: variacao_temperatura_d1
+      - name: variacao_precipitacao_d1
+      - name: categoria_conforto_termico
+      - name: categoria_precipitacao
+
+  - name: fato_disponibilidade_usinas_diario
+    description: "Disponibilidade diária agregada por subsistema/tipo."
+    columns:
+      - name: sk_fato_disponibilidade
+        tests: [not_null, unique]
+      - name: data_referencia
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: id_subsistema
+        tests:
+          - relationships:
+              to: ref('dim_subsistema')
+              field: id_subsistema
+              severity: warn
+      - name: nom_subsistema
+      - name: nom_tipocombustivel
+      - name: pot_instalada_total_mw
+      - name: disp_operacional_total_mw
+      - name: disp_sincronizada_total_mw
+      - name: num_usinas_tipo
+      - name: num_usinas_ativas
+      - name: taxa_disponibilidade_operacional_pct
+      - name: taxa_disponibilidade_sincronizada_pct
+      - name: taxa_usinas_ativas_pct
+      - name: categoria_disponibilidade
+      - name: categoria_operacao_usinas
+
+  - name: fato_fator_capacidade_diario
+    description: "Fator de capacidade (agregado diário)."
+    columns:
+      - name: data_operacao
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: id_subsistema
+        tests:
+          - relationships:
+              to: ref('dim_subsistema')
+              field: id_subsistema
+              severity: warn
+      - name: nome_usina_conjunto
+      - name: tipo_usina
+      - name: modalidade_operacao
+      - name: ceg
+      - name: capacidade_instalada_mw
+      - name: geracao_programada_total_mwh
+      - name: geracao_verificada_total_mwh
+      - name: diferenca_prog_verif_mwh
+      - name: percentual_realizacao
+      - name: fator_capacidade_medio_pct
+      - name: fator_capacidade_minimo_pct
+      - name: fator_capacidade_maximo_pct
+      - name: utilizacao_capacidade_pct
+      - name: classificacao_performance
+      - name: total_registros_dia
+      - name: periodos_com_geracao
+      - name: periodos_com_fator_capacidade
+      - name: media_horaria_geracao_mw
+      - name: regiao_foco
+      - name: ano_dados
+      - name: mes_dados
+
+  - name: fato_geracao_termica_diaria
+    description: "Geração térmica não econômica (programada) agregada por usina e dia."
+    columns:
+      - name: data_operacao
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: id_subsistema
+        tests:
+          - relationships:
+              to: ref('dim_subsistema')
+              field: id_subsistema
+              severity: warn
+      - name: nome_usina
+      - name: codigo_usina_planejamento
+      - name: ceg
+      - name: ger_termica_nao_economica_mwh
+      - name: prog_razao_eletrica_total_mwh
+      - name: prog_garantia_energetica_total_mwh
+      - name: pct_razao_eletrica
+      - name: pct_garantia_energetica
+      - name: total_registros_dia
+      - name: periodos_com_razao_eletrica
+      - name: periodos_com_garantia_energetica
+      - name: media_horaria_ger_nao_economica_mw
+      - name: ano_dados
+      - name: mes_dados
+
+  - name: fato_reservatorio_energia_diario
+    description: "Métricas de EAR/ENA por subsistema (diário)."
+    columns:
+      - name: data_referencia
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: id_subsistema
+        tests:
+          - relationships:
+              to: ref('dim_subsistema')
+              field: id_subsistema
+              severity: warn
+      - name: nom_subsistema
+      - name: ear_max_mwmes
+      - name: ear_verificada_mwmes
+      - name: ear_percentual
+      - name: ena_bruta_mwmed
+      - name: ena_armazenavel_mwmed
+      - name: ena_bruta_percentual_mlt
+      - name: ena_armazenavel_percentual_mlt
+      - name: razao_ear_ena
+      - name: eficiencia_armazenamento_pct
+      - name: taxa_ocupacao_reservatorio_pct
+      - name: ear_percentual_media_7d_anterior
+      - name: ena_percentual_media_7d_anterior
+      - name: ear_percentual_dia_anterior
+      - name: ena_percentual_dia_anterior
+      - name: variacao_ear_percentual_d1
+      - name: variacao_ena_percentual_d1
+      - name: tendencia_ear_7d
+      - name: classificacao_risco_ear
+      - name: classificacao_ena
+
+  - name: fato_restricao_fotovoltaica_diario
+    description: "Restrição fotovoltaica agregada por usina/dia (SE)."
+    columns:
+      - name: data_operacao
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: id_subsistema
+        tests:
+          - relationships:
+              to: ref('dim_subsistema')
+              field: id_subsistema
+              severity: warn
+      - name: nome_usina
+      - name: ceg
+      - name: id_ons
+      - name: geracao_media_mw
+      - name: geracao_maxima_mw
+      - name: geracao_minima_mw
+      - name: geracao_total_mwh
+      - name: geracao_limitada_media_mw
+      - name: restricao_total_aplicada_mwh
+      - name: disponibilidade_media_mw
+      - name: disponibilidade_maxima_mw
+      - name: utilizacao_disponibilidade_media_pct
+      - name: percentual_periodos_restringidos
+      - name: eficiencia_energetica_pct
+      - name: percentual_perda_restricao
+      - name: severidade_restricao
+      - name: codigo_razao_predominante
+      - name: codigo_origem_predominante
+      - name: periodos_restringidos
+      - name: periodos_normais
+      - name: periodos_com_restricao
+      - name: total_registros_dia
+      - name: regiao_foco
+      - name: ano_dados
+      - name: mes_dados
+
+  - name: fato_risco_energetico_diario
+    description: "Indicador composto de risco energético (diário)."
+    columns:
+      - name: sk_fato_risco
+        tests: [not_null, unique]
+      - name: data_referencia
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_data')
+              field: data_completa
+              severity: warn
+      - name: id_subsistema
+        tests:
+          - relationships:
+              to: ref('dim_subsistema')
+              field: id_subsistema
+              severity: warn
+      - name: nom_subsistema
+      - name: nivel_risco_categoria
+      - name: score_risco_numerico
+      - name: intercambio_percentil_atual
+      - name: intercambio_mw_medio_dia
+      - name: limite_risco_alto
+      - name: limite_risco_baixo
+      - name: ger_hidraulica_mwh_dia
+      - name: ger_termica_mwh_dia
+      - name: ger_eolica_mwh_dia
+      - name: ger_solar_mwh_dia
+      - name: carga_mwh_dia
+      - name: ear_percentual
+      - name: ena_bruta_percentual_mlt
+      - name: disp_sincronizada_mw
+      - name: temperatura_media_dia_c
+      - name: precipitacao_total_dia_mm
+      - name: carga_d_menos_1
+      - name: ear_d_menos_1
+      - name: ena_d_menos_1
+      - name: disp_d_menos_1
+      - name: temp_media_max_7d
+      - name: precip_soma_7d
+      - name: flag_importacao_critica

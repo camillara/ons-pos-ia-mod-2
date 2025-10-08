@@ -135,3 +135,48 @@ models:
           expression: "ano_dados IN (2024, 2025)"
       - dbt_utils.expression_is_true:
           expression: "mes_dados BETWEEN 1 AND 12"
+  
+  - name: stg_restricao_fotovoltaica
+    tests:
+      - not_null:
+          column_name: data_instante
+      - not_null:
+          column_name: nome_usina
+      - not_null:
+          column_name: nome_subsistema
+
+  - name: stg_tipo_combustivel
+    tests:
+      - not_null:
+          column_name: nome_tipo_combustivel
+      - unique:
+          column_name: nome_tipo_combustivel
+
+  - name: stg_fator_capacidade
+    description: "Staging de FATOR_CAPACIDADE (2023–2025) unificando meses/anos e tipando campos."
+    tests:       
+      - not_null:
+          column_name: data_instante
+      - not_null:
+          column_name: data_operacao
+      - not_null:
+          column_name: nome_usina_conjunto
+      - not_null:
+          column_name: nome_subsistema        
+      - dbt_utils.expression_is_true:
+          expression: "ano_dados in (2023, 2024, 2025)"
+      - dbt_utils.expression_is_true:
+          expression: "mes_dados between 1 and 12"        
+      - dbt_utils.expression_is_true:
+          expression: "capacidade_instalada_mw is null or capacidade_instalada_mw >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "geracao_programada_mwh is null or geracao_programada_mwh >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "geracao_verificada_mwh is null or geracao_verificada_mwh >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "fator_capacidade_percentual is null or (fator_capacidade_percentual >= 0 and fator_capacidade_percentual <= 100)"        
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [id_ons, data_instante]
+          config:
+            severity: warn
+
