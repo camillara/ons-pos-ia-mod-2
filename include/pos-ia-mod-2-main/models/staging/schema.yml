@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: STG_BALANCO_ENERGIA_SUBSISTEMA
+  - name: stg_balanco_energia_subsistema
     description: "Modelo de staging para o balanço de energia por subsistema no ano de 2025."
     tests:
       - not_null:
@@ -23,7 +23,7 @@ models:
       - dbt_utils.expression_is_true:
           expression: "VAL_GERHIDRAULICA >= 0"
 
-  - name: STG_DISPONIBILIDADE_USINA
+  - name: stg_disponibilidade_usina
     description: "Modelo de staging para disponibilidade das usinas."
     tests:
       - not_null:
@@ -39,7 +39,7 @@ models:
       - dbt_utils.expression_is_true:
           expression: "VAL_DISPOPERACIONAL >= 0"
 
-  - name: STG_EAR_DIARIO_SUBSISTEMA
+  - name: stg_ear_diario_subsistema
     description: "Modelo de staging para EAR diário por subsistema."
     tests:
       - not_null:
@@ -51,7 +51,7 @@ models:
       - dbt_utils.expression_is_true:
           expression: "EAR_VERIF_SUBSISTEMA_PERCENTUAL BETWEEN 0 AND 100"
 
-  - name: STG_ENA_DIARIO_SUBSISTEMA
+  - name: stg_ena_diario_subsistema
     description: "Modelo de staging para ENA diário por subsistema."
     tests:
       - not_null:
@@ -132,8 +132,6 @@ models:
       - not_null:
           column_name: nome_subsistema
       - dbt_utils.expression_is_true:
-          arguments:
-            expression: "ano_dados IN (2024, 2025)"
+          expression: "ano_dados IN (2024, 2025)"
       - dbt_utils.expression_is_true:
-          arguments:
-            expression: "mes_dados BETWEEN 1 AND 12"
+          expression: "mes_dados BETWEEN 1 AND 12"

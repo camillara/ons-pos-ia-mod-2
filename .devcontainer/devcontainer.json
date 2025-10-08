@@ -1,9 +1,9 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
-    "features": {
-        "ghcr.io/astronomer/devcontainer-features/astro-cli:1": {
-          "version": "v1.28.1"
-        }
-    },
-    "forwardPorts": [8080]
-  }
+  "name": "Airflow Astro Codespace",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "curl -sSf https://install.astronomer.io | sudo bash"
+}
