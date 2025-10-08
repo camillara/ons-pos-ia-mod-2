@@ -1,0 +1,24 @@
+name: ons_ml
+version: '1.0.0'
+
+profile: ons_ml
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  ons_ml:
+    staging:
+      +schema: STAGING_ONS
+      +materialized: view
+    core:
+      +schema: CORE_ONS
+      +materialized: table

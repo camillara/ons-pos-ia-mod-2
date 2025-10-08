@@ -1,0 +1,530 @@
+[0m23:07:15.847429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78365ce38c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78365f87d520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78365d6bab70>]}
+
+
+============================== 23:07:15.876141 | d5881f74-effc-4926-a09d-93efe8fe620c ==============================
+[0m23:07:15.876141 [info ] [MainThread]: Running with dbt=1.10.13
+[0m23:07:15.876826 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'write_json': 'True', 'introspect': 'True', 'version_check': 'True', 'quiet': 'False', 'target_path': 'None', 'log_path': 'logs', 'log_cache_events': 'False', 'printer_width': '80', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/codespace/.dbt', 'debug': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'empty': 'None', 'static_parser': 'True', 'invocation_command': 'dbt init laboratorio_dbt', 'log_format': 'default', 'warn_error': 'None'}
+[0m23:07:15.890307 [info ] [MainThread]: Creating dbt configuration folder at /home/codespace/.dbt
+[0m23:07:15.891924 [debug] [MainThread]: Starter project path: /usr/local/python/3.12.1/lib/python3.12/site-packages/dbt/include/starter_project
+[0m23:07:15.896358 [info ] [MainThread]: 
+Your new dbt project "laboratorio_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:07:15.896876 [info ] [MainThread]: Setting up your profile.
+[0m23:18:57.850408 [info ] [MainThread]: Profile laboratorio_dbt written to /home/codespace/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:18:57.853114 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 702.0684, "process_in_blocks": "215032", "process_kernel_time": 1.093146, "process_mem_max_rss": "204364", "process_out_blocks": "128", "process_user_time": 2.325475}
+[0m23:18:57.854341 [debug] [MainThread]: Command `dbt init` succeeded at 23:18:57.854192 after 702.07 seconds
+[0m23:18:57.855078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78365e29c350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7836414b52e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78364025b920>]}
+[0m23:18:57.855805 [debug] [MainThread]: Flushing usage events
+[0m23:18:57.939242 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:19:14.710889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x719fc4625e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x719fc5c36600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x719fc4c42600>]}
+
+
+============================== 23:19:14.714595 | 2ded165c-7a07-4e64-88e1-36b470fe36f4 ==============================
+[0m23:19:14.714595 [info ] [MainThread]: Running with dbt=1.10.13
+[0m23:19:14.715335 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'write_json': 'True', 'static_parser': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'target_path': 'None', 'log_format': 'default', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'log_cache_events': 'False', 'partial_parse': 'True', 'introspect': 'True', 'profiles_dir': '/home/codespace/.dbt', 'debug': 'False', 'printer_width': '80', 'log_path': 'logs', 'fail_fast': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'warn_error': 'None', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None'}
+[0m23:19:14.725148 [info ] [MainThread]: dbt version: 1.10.13
+[0m23:19:14.725826 [info ] [MainThread]: python version: 3.12.1
+[0m23:19:14.726314 [info ] [MainThread]: python path: /usr/local/python/3.12.1/bin/python3
+[0m23:19:14.726739 [info ] [MainThread]: os info: Linux-6.8.0-1030-azure-x86_64-with-glibc2.31
+[0m23:19:15.403848 [info ] [MainThread]: Using profiles dir at /home/codespace/.dbt
+[0m23:19:15.404550 [info ] [MainThread]: Using profiles.yml file at /home/codespace/.dbt/profiles.yml
+[0m23:19:15.405100 [info ] [MainThread]: Using dbt_project.yml file at /workspaces/astro-cli-codespaces/include/dbt_project.yml
+[0m23:19:15.405803 [info ] [MainThread]: adapter type: snowflake
+[0m23:19:15.406278 [info ] [MainThread]: adapter version: 1.10.2
+[0m23:19:15.406740 [info ] [MainThread]: Configuration:
+[0m23:19:15.407178 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:19:15.407587 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:19:15.408017 [info ] [MainThread]: Required dependencies:
+[0m23:19:15.408458 [debug] [MainThread]: Executing "git --help"
+[0m23:19:15.411045 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:19:15.411600 [debug] [MainThread]: STDERR: "b''"
+[0m23:19:15.412052 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:19:15.412496 [info ] [MainThread]: Connection:
+[0m23:19:15.412983 [info ] [MainThread]:   account: VW12473
+[0m23:19:15.413415 [info ] [MainThread]:   user: MILLARA85
+[0m23:19:15.413830 [info ] [MainThread]:   database: LAB_PIPELINE
+[0m23:19:15.414289 [info ] [MainThread]:   warehouse: LAB_WH_AIRBYTE
+[0m23:19:15.414720 [info ] [MainThread]:   role: AIRBYTE_DEV
+[0m23:19:15.415171 [info ] [MainThread]:   schema: CORE
+[0m23:19:15.415604 [info ] [MainThread]:   authenticator: None
+[0m23:19:15.416032 [info ] [MainThread]:   oauth_client_id: None
+[0m23:19:15.416441 [info ] [MainThread]:   query_tag: None
+[0m23:19:15.416841 [info ] [MainThread]:   client_session_keep_alive: False
+[0m23:19:15.417308 [info ] [MainThread]:   host: None
+[0m23:19:15.417722 [info ] [MainThread]:   port: None
+[0m23:19:15.418153 [info ] [MainThread]:   proxy_host: None
+[0m23:19:15.418562 [info ] [MainThread]:   proxy_port: None
+[0m23:19:15.418985 [info ] [MainThread]:   protocol: None
+[0m23:19:15.419424 [info ] [MainThread]:   connect_retries: 1
+[0m23:19:15.419839 [info ] [MainThread]:   connect_timeout: None
+[0m23:19:15.420269 [info ] [MainThread]:   retry_on_database_errors: False
+[0m23:19:15.420708 [info ] [MainThread]:   retry_all: False
+[0m23:19:15.421218 [info ] [MainThread]:   insecure_mode: False
+[0m23:19:15.421674 [info ] [MainThread]:   reuse_connections: True
+[0m23:19:15.422136 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m23:19:15.422789 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m23:19:15.572311 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m23:19:15.813580 [debug] [MainThread]: Using snowflake connection "debug"
+[0m23:19:15.814196 [debug] [MainThread]: On debug: select 1 as id
+[0m23:19:15.814621 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:19:19.602132 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m23:19:19.602770 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m23:19:19.603420 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:19:19.604039 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m23:19:19.604532 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </workspaces/astro-cli-codespaces/include/dbt_project.yml> not found
+
+[0m23:19:19.605174 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  290404 (08001): 404 Not Found: post VW12473.snowflakecomputing.com:443/session/v1/login-request
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:19:19.606963 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.9617, "process_in_blocks": "18032", "process_kernel_time": 1.141871, "process_mem_max_rss": "230168", "process_out_blocks": "2424", "process_user_time": 2.671698}
+[0m23:19:19.607567 [debug] [MainThread]: Command `dbt debug` failed at 23:19:19.607457 after 4.96 seconds
+[0m23:19:19.608057 [debug] [MainThread]: Connection 'debug' was left open.
+[0m23:19:19.608565 [debug] [MainThread]: On debug: No close available on handle
+[0m23:19:19.609059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x719fc4432ae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x719fa1e6b9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x719fa1d9db20>]}
+[0m23:19:19.609570 [debug] [MainThread]: Flushing usage events
+[0m23:19:19.674776 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:35.125345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c32a72b9160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c32a82e65d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c32a736e870>]}
+
+
+============================== 23:27:35.129193 | 098abd36-f230-4d49-af82-3f454b9cb430 ==============================
+[0m23:27:35.129193 [info ] [MainThread]: Running with dbt=1.10.13
+[0m23:27:35.129928 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'use_colors': 'True', 'fail_fast': 'False', 'quiet': 'False', 'invocation_command': 'dbt debug', 'no_print': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'warn_error': 'None', 'target_path': 'None', 'version_check': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'profiles_dir': '/home/codespace/.dbt', 'write_json': 'True', 'log_cache_events': 'False', 'printer_width': '80'}
+[0m23:27:35.140005 [info ] [MainThread]: dbt version: 1.10.13
+[0m23:27:35.140653 [info ] [MainThread]: python version: 3.12.1
+[0m23:27:35.141153 [info ] [MainThread]: python path: /usr/local/python/3.12.1/bin/python3
+[0m23:27:35.141581 [info ] [MainThread]: os info: Linux-6.8.0-1030-azure-x86_64-with-glibc2.31
+[0m23:27:35.831992 [info ] [MainThread]: Using profiles dir at /home/codespace/.dbt
+[0m23:27:35.832681 [info ] [MainThread]: Using profiles.yml file at /home/codespace/.dbt/profiles.yml
+[0m23:27:35.833195 [info ] [MainThread]: Using dbt_project.yml file at /workspaces/astro-cli-codespaces/include/dbt_project.yml
+[0m23:27:35.833882 [info ] [MainThread]: adapter type: snowflake
+[0m23:27:35.834334 [info ] [MainThread]: adapter version: 1.10.2
+[0m23:27:35.834805 [info ] [MainThread]: Configuration:
+[0m23:27:35.835269 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:27:35.835713 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:27:35.836200 [info ] [MainThread]: Required dependencies:
+[0m23:27:35.836639 [debug] [MainThread]: Executing "git --help"
+[0m23:27:35.839253 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:27:35.839808 [debug] [MainThread]: STDERR: "b''"
+[0m23:27:35.840312 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:27:35.840754 [info ] [MainThread]: Connection:
+[0m23:27:35.841215 [info ] [MainThread]:   account: VDFEINT-VW12473
+[0m23:27:35.841629 [info ] [MainThread]:   user: AIRBYTE_DEV
+[0m23:27:35.842060 [info ] [MainThread]:   database: LAB_PIPELINE
+[0m23:27:35.842470 [info ] [MainThread]:   warehouse: LAB_WH_AIRBYTE
+[0m23:27:35.842904 [info ] [MainThread]:   role: AIRBYTE_DEV
+[0m23:27:35.843342 [info ] [MainThread]:   schema: CORE
+[0m23:27:35.843785 [info ] [MainThread]:   authenticator: None
+[0m23:27:35.844255 [info ] [MainThread]:   oauth_client_id: None
+[0m23:27:35.844687 [info ] [MainThread]:   query_tag: None
+[0m23:27:35.845143 [info ] [MainThread]:   client_session_keep_alive: False
+[0m23:27:35.845578 [info ] [MainThread]:   host: None
+[0m23:27:35.846033 [info ] [MainThread]:   port: None
+[0m23:27:35.846609 [info ] [MainThread]:   proxy_host: None
+[0m23:27:35.847425 [info ] [MainThread]:   proxy_port: None
+[0m23:27:35.848181 [info ] [MainThread]:   protocol: None
+[0m23:27:35.848638 [info ] [MainThread]:   connect_retries: 1
+[0m23:27:35.849073 [info ] [MainThread]:   connect_timeout: None
+[0m23:27:35.849484 [info ] [MainThread]:   retry_on_database_errors: False
+[0m23:27:35.849918 [info ] [MainThread]:   retry_all: False
+[0m23:27:35.850358 [info ] [MainThread]:   insecure_mode: False
+[0m23:27:35.850791 [info ] [MainThread]:   reuse_connections: True
+[0m23:27:35.851243 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m23:27:35.852010 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m23:27:35.995110 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m23:27:36.025965 [debug] [MainThread]: Using snowflake connection "debug"
+[0m23:27:36.026580 [debug] [MainThread]: On debug: select 1 as id
+[0m23:27:36.027145 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:27:37.295980 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.269 seconds
+[0m23:27:37.297249 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:27:37.297790 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:27:37.298320 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </workspaces/astro-cli-codespaces/include/dbt_project.yml> not found
+
+[0m23:27:37.299474 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 2.2458947, "process_in_blocks": "392", "process_kernel_time": 1.091332, "process_mem_max_rss": "229556", "process_out_blocks": "2456", "process_user_time": 2.590414}
+[0m23:27:37.300106 [debug] [MainThread]: Command `dbt debug` failed at 23:27:37.299992 after 2.25 seconds
+[0m23:27:37.300592 [debug] [MainThread]: Connection 'debug' was left open.
+[0m23:27:37.301159 [debug] [MainThread]: On debug: Close
+[0m23:27:37.590736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c32a6ef9700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c3288fe1f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c3283f3f4d0>]}
+[0m23:27:37.591480 [debug] [MainThread]: Flushing usage events
+[0m23:27:37.652062 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:29:47.016028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d43f54fe0f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d43f8001550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d43f54fe720>]}
+
+
+============================== 23:29:47.019548 | 1e8cf1f1-3d31-45ae-bc88-4a33a7e2a177 ==============================
+[0m23:29:47.019548 [info ] [MainThread]: Running with dbt=1.10.13
+[0m23:29:47.020269 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'warn_error': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'quiet': 'False', 'partial_parse': 'True', 'profiles_dir': '/home/codespace/.dbt', 'empty': 'None', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'printer_width': '80', 'invocation_command': 'dbt debug', 'log_path': '/workspaces/astro-cli-codespaces/include/logs', 'target_path': 'None'}
+[0m23:29:47.029559 [info ] [MainThread]: dbt version: 1.10.13
+[0m23:29:47.030158 [info ] [MainThread]: python version: 3.12.1
+[0m23:29:47.030668 [info ] [MainThread]: python path: /usr/local/python/3.12.1/bin/python3
+[0m23:29:47.031163 [info ] [MainThread]: os info: Linux-6.8.0-1030-azure-x86_64-with-glibc2.31
+[0m23:29:47.706594 [info ] [MainThread]: Using profiles dir at /home/codespace/.dbt
+[0m23:29:47.707261 [info ] [MainThread]: Using profiles.yml file at /home/codespace/.dbt/profiles.yml
+[0m23:29:47.707726 [info ] [MainThread]: Using dbt_project.yml file at /workspaces/astro-cli-codespaces/include/dbt_project.yml
+[0m23:29:47.708447 [info ] [MainThread]: adapter type: snowflake
+[0m23:29:47.708932 [info ] [MainThread]: adapter version: 1.10.2
+[0m23:29:47.826391 [info ] [MainThread]: Configuration:
+[0m23:29:47.827065 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:29:47.827557 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:29:47.828070 [info ] [MainThread]: Required dependencies:
+[0m23:29:47.828580 [debug] [MainThread]: Executing "git --help"
+[0m23:29:47.831239 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:29:47.831919 [debug] [MainThread]: STDERR: "b''"
+[0m23:29:47.832387 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:29:47.832854 [info ] [MainThread]: Connection:
+[0m23:29:47.833369 [info ] [MainThread]:   account: VDFEINT-VW12473
+[0m23:29:47.833818 [info ] [MainThread]:   user: AIRBYTE_DEV
+[0m23:29:47.834309 [info ] [MainThread]:   database: LAB_PIPELINE
+[0m23:29:47.834785 [info ] [MainThread]:   warehouse: LAB_WH_AIRBYTE
+[0m23:29:47.835301 [info ] [MainThread]:   role: AIRBYTE_DEV
+[0m23:29:47.835765 [info ] [MainThread]:   schema: CORE
+[0m23:29:47.836260 [info ] [MainThread]:   authenticator: None
+[0m23:29:47.836704 [info ] [MainThread]:   oauth_client_id: None
+[0m23:29:47.837175 [info ] [MainThread]:   query_tag: None
+[0m23:29:47.837621 [info ] [MainThread]:   client_session_keep_alive: False
+[0m23:29:47.838102 [info ] [MainThread]:   host: None
+[0m23:29:47.838553 [info ] [MainThread]:   port: None
+[0m23:29:47.839018 [info ] [MainThread]:   proxy_host: None
+[0m23:29:47.839460 [info ] [MainThread]:   proxy_port: None
+[0m23:29:47.839951 [info ] [MainThread]:   protocol: None
+[0m23:29:47.840395 [info ] [MainThread]:   connect_retries: 1
+[0m23:29:47.840848 [info ] [MainThread]:   connect_timeout: None
+[0m23:29:47.841343 [info ] [MainThread]:   retry_on_database_errors: False
+[0m23:29:47.841803 [info ] [MainThread]:   retry_all: False
+[0m23:29:47.842294 [info ] [MainThread]:   insecure_mode: False
+[0m23:29:47.842746 [info ] [MainThread]:   reuse_connections: True
+[0m23:29:47.843248 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m23:29:47.843907 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m23:29:47.986402 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m23:29:48.015575 [debug] [MainThread]: Using snowflake connection "debug"
+[0m23:29:48.016217 [debug] [MainThread]: On debug: select 1 as id
+[0m23:29:48.016717 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:29:49.123797 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.107 seconds
+[0m23:29:49.125119 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:29:49.125689 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:29:49.127024 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 2.1756558, "process_in_blocks": "0", "process_kernel_time": 1.050232, "process_mem_max_rss": "228900", "process_out_blocks": "40", "process_user_time": 2.644548}
+[0m23:29:49.127644 [debug] [MainThread]: Command `dbt debug` succeeded at 23:29:49.127520 after 2.18 seconds
+[0m23:29:49.128109 [debug] [MainThread]: Connection 'debug' was left open.
+[0m23:29:49.128539 [debug] [MainThread]: On debug: Close
+[0m23:29:49.411219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d43f53cc5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d43d8a38590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d43d3438e30>]}
+[0m23:29:49.411940 [debug] [MainThread]: Flushing usage events
+[0m23:29:49.491177 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:29:51.795178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a03a6b2420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a03a266c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a03a51e480>]}
+
+
+============================== 23:29:51.800292 | 7ae892a1-c369-4378-8211-e95b3db040c3 ==============================
+[0m23:29:51.800292 [info ] [MainThread]: Running with dbt=1.10.13
+[0m23:29:51.801435 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'static_parser': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'debug': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/codespace/.dbt', 'log_cache_events': 'False', 'log_format': 'default', 'no_print': 'None', 'partial_parse': 'True', 'empty': 'False', 'log_path': '/workspaces/astro-cli-codespaces/include/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None'}
+[0m23:29:52.629223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a01c506fc0>]}
+[0m23:29:52.702478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a03a733770>]}
+[0m23:29:52.703571 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m23:29:52.853986 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m23:29:52.854946 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:29:52.855521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a017c3a510>]}
+[0m23:29:54.052452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a0175795b0>]}
+[0m23:29:54.111585 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/astro-cli-codespaces/include/target/manifest.json
+[0m23:29:54.113735 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/astro-cli-codespaces/include/target/semantic_manifest.json
+[0m23:29:54.128558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a0174af890>]}
+[0m23:29:54.129284 [info ] [MainThread]: Found 1 model, 479 macros
+[0m23:29:54.129817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a0174b8290>]}
+[0m23:29:54.131612 [info ] [MainThread]: 
+[0m23:29:54.132167 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:29:54.132631 [info ] [MainThread]: 
+[0m23:29:54.133322 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:29:54.134388 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LAB_PIPELINE'
+[0m23:29:54.176668 [debug] [ThreadPool]: Using snowflake connection "list_LAB_PIPELINE"
+[0m23:29:54.177310 [debug] [ThreadPool]: On list_LAB_PIPELINE: show terse schemas in database LAB_PIPELINE
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "laboratorio_dbt", "target_name": "dev", "connection_name": "list_LAB_PIPELINE"} */
+[0m23:29:54.177778 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:29:55.268490 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.091 seconds
+[0m23:29:55.271169 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_LAB_PIPELINE, now list_LAB_PIPELINE_CORE)
+[0m23:29:55.284691 [debug] [ThreadPool]: Using snowflake connection "list_LAB_PIPELINE_CORE"
+[0m23:29:55.285340 [debug] [ThreadPool]: On list_LAB_PIPELINE_CORE: show objects in LAB_PIPELINE.CORE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "laboratorio_dbt", "target_name": "dev", "connection_name": "list_LAB_PIPELINE_CORE"} */;
+[0m23:29:55.505089 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.219 seconds
+[0m23:29:55.509640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a0176fdd30>]}
+[0m23:29:55.512641 [debug] [Thread-1 (]: Began running node model.laboratorio_dbt.hello
+[0m23:29:55.513342 [info ] [Thread-1 (]: 1 of 1 START sql view model CORE.hello ......................................... [RUN]
+[0m23:29:55.513943 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_LAB_PIPELINE_CORE, now model.laboratorio_dbt.hello)
+[0m23:29:55.514455 [debug] [Thread-1 (]: Began compiling node model.laboratorio_dbt.hello
+[0m23:29:55.521321 [debug] [Thread-1 (]: Writing injected SQL for node "model.laboratorio_dbt.hello"
+[0m23:29:55.522301 [debug] [Thread-1 (]: Began executing node model.laboratorio_dbt.hello
+[0m23:29:55.557026 [debug] [Thread-1 (]: Writing runtime sql for node "model.laboratorio_dbt.hello"
+[0m23:29:55.558336 [debug] [Thread-1 (]: Using snowflake connection "model.laboratorio_dbt.hello"
+[0m23:29:55.558922 [debug] [Thread-1 (]: On model.laboratorio_dbt.hello: create or replace   view LAB_PIPELINE.CORE.hello
+  
+  
+  
+  
+  as (
+    select 'ok' as status
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "laboratorio_dbt", "target_name": "dev", "node_id": "model.laboratorio_dbt.hello"} */;
+[0m23:29:55.920401 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.361 seconds
+[0m23:29:55.951563 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7ae892a1-c369-4378-8211-e95b3db040c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a03c424800>]}
+[0m23:29:55.952694 [info ] [Thread-1 (]: 1 of 1 OK created sql view model CORE.hello .................................... [[32mSUCCESS 1[0m in 0.44s]
+[0m23:29:55.953552 [debug] [Thread-1 (]: Finished running node model.laboratorio_dbt.hello
+[0m23:29:55.955143 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:29:55.955616 [debug] [MainThread]: Connection 'model.laboratorio_dbt.hello' was left open.
+[0m23:29:55.956088 [debug] [MainThread]: On model.laboratorio_dbt.hello: Close
+[0m23:29:56.231757 [info ] [MainThread]: 
+[0m23:29:56.232414 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.10 seconds (2.10s).
+[0m23:29:56.233283 [debug] [MainThread]: Command end result
+[0m23:29:56.256310 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/astro-cli-codespaces/include/target/manifest.json
+[0m23:29:56.258347 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/astro-cli-codespaces/include/target/semantic_manifest.json
+[0m23:29:56.264814 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/astro-cli-codespaces/include/target/run_results.json
+[0m23:29:56.265337 [info ] [MainThread]: 
+[0m23:29:56.265938 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:29:56.266430 [info ] [MainThread]: 
+[0m23:29:56.266951 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m23:29:56.268095 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.5492215, "process_in_blocks": "520", "process_kernel_time": 1.129194, "process_mem_max_rss": "239500", "process_out_blocks": "2968", "process_user_time": 4.145043}
+[0m23:29:56.268748 [debug] [MainThread]: Command `dbt run` succeeded at 23:29:56.268627 after 4.55 seconds
+[0m23:29:56.269320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a03a51e480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a0174bbda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a01748f020>]}
+[0m23:29:56.269856 [debug] [MainThread]: Flushing usage events
+[0m23:29:56.305706 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:27:55.913153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b4bec62990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b4be788d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b4be5a3a10>]}
+
+
+============================== 00:27:55.916830 | 72858acc-5877-4136-9304-69b699090d99 ==============================
+[0m00:27:55.916830 [info ] [MainThread]: Running with dbt=1.10.13
+[0m00:27:55.917545 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt deps', 'printer_width': '80', 'write_json': 'True', 'profiles_dir': '/home/codespace/.dbt', 'cache_selected_only': 'False', 'static_parser': 'True', 'empty': 'None', 'log_path': '/workspaces/astro-cli-codespaces/include/logs', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'log_format': 'default', 'warn_error': 'None', 'indirect_selection': 'eager', 'quiet': 'False', 'no_print': 'None', 'target_path': 'None', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'introspect': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'version_check': 'True'}
+[0m00:27:56.058077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '72858acc-5877-4136-9304-69b699090d99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b4bdce9220>]}
+[0m00:27:56.071278 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m00:27:56.072297 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m00:27:56.073465 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.22532143, "process_in_blocks": "0", "process_kernel_time": 0.217509, "process_mem_max_rss": "102664", "process_out_blocks": "8", "process_user_time": 1.69218}
+[0m00:27:56.074101 [debug] [MainThread]: Command `dbt deps` succeeded at 00:27:56.073978 after 0.23 seconds
+[0m00:27:56.074582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b4be8eee70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b4bd89d7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78b4bd9e9550>]}
+[0m00:27:56.075095 [debug] [MainThread]: Flushing usage events
+[0m00:27:56.133757 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:31:23.262893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f23a4da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f24397c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f4c601a0>]}
+
+
+============================== 00:31:23.266670 | d46ce928-c3c0-4697-b6b5-643d2a58f8bf ==============================
+[0m00:31:23.266670 [info ] [MainThread]: Running with dbt=1.10.13
+[0m00:31:23.267427 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'log_path': '/workspaces/astro-cli-codespaces/include/logs', 'debug': 'False', 'invocation_command': 'dbt deps', 'profiles_dir': '/home/codespace/.dbt', 'target_path': 'None', 'partial_parse': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'empty': 'None', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'use_colors': 'True', 'version_check': 'True', 'no_print': 'None', 'write_json': 'True'}
+[0m00:31:23.417756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd46ce928-c3c0-4697-b6b5-643d2a58f8bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f214f620>]}
+[0m00:31:23.431271 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-er0xz85v'
+[0m00:31:23.432096 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m00:31:23.497104 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m00:31:23.499904 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m00:31:23.530346 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m00:31:23.540551 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m00:31:23.574279 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m00:31:23.593563 [info ] [MainThread]: Updating lock file in file path: /workspaces/astro-cli-codespaces/include/package-lock.yml
+[0m00:31:23.597440 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-jgxamp8l'
+[0m00:31:23.602556 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m00:31:23.684063 [info ] [MainThread]: Installed from version 1.1.1
+[0m00:31:23.684696 [info ] [MainThread]: Updated version available: 1.3.1
+[0m00:31:23.685281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'd46ce928-c3c0-4697-b6b5-643d2a58f8bf', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f217f200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f217c680>]}
+[0m00:31:23.685788 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m00:31:23.735170 [info ] [MainThread]: Installed from version 0.12.1
+[0m00:31:23.735786 [info ] [MainThread]: Updated version available: 0.13.1
+[0m00:31:23.736350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'd46ce928-c3c0-4697-b6b5-643d2a58f8bf', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f318cb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f318cad0>]}
+[0m00:31:23.736886 [info ] [MainThread]: 
+[0m00:31:23.737397 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils', 'dbt-labs/codegen']                 
+Update your versions in packages.yml, then run dbt deps
+[0m00:31:23.738730 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.5405844, "process_in_blocks": "0", "process_kernel_time": 0.23275, "process_mem_max_rss": "104724", "process_out_blocks": "2936", "process_user_time": 1.85002}
+[0m00:31:23.739485 [debug] [MainThread]: Command `dbt deps` succeeded at 00:31:23.739337 after 0.54 seconds
+[0m00:31:23.740011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f2e39220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f22a7a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cb4f22a7950>]}
+[0m00:31:23.740521 [debug] [MainThread]: Flushing usage events
+[0m00:31:23.788489 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:48:30.497841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c91679e0680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9167143cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c916997fc20>]}
+
+
+============================== 00:48:30.502051 | 456adadd-e9b3-474f-a787-f251278d9142 ==============================
+[0m00:48:30.502051 [info ] [MainThread]: Running with dbt=1.10.13
+[0m00:48:30.502834 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'profiles_dir': '/home/codespace/.dbt', 'log_path': '/workspaces/astro-cli-codespaces/include/logs', 'no_print': 'None', 'partial_parse': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'version_check': 'True', 'printer_width': '80', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'static_parser': 'True', 'empty': 'None', 'write_json': 'True', 'warn_error': 'None', 'introspect': 'True', 'quiet': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'indirect_selection': 'eager'}
+[0m00:48:30.655017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '456adadd-e9b3-474f-a787-f251278d9142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c916750c380>]}
+[0m00:48:30.687325 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-cc6cqc3m'
+[0m00:48:30.687971 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m00:48:30.720857 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m00:48:30.723277 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m00:48:30.753462 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m00:48:30.758793 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m00:48:30.787906 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m00:48:30.791234 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m00:48:30.882175 [info ] [MainThread]: Installed from version 1.1.1
+[0m00:48:30.882931 [info ] [MainThread]: Updated version available: 1.3.1
+[0m00:48:30.883479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '456adadd-e9b3-474f-a787-f251278d9142', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c91676a3380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9167042e10>]}
+[0m00:48:30.884029 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m00:48:30.935467 [info ] [MainThread]: Installed from version 0.12.1
+[0m00:48:30.936079 [info ] [MainThread]: Updated version available: 0.13.1
+[0m00:48:30.936582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '456adadd-e9b3-474f-a787-f251278d9142', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9166ca66c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9166ca6690>]}
+[0m00:48:30.937095 [info ] [MainThread]: 
+[0m00:48:30.937554 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils', 'dbt-labs/codegen']                 
+Update your versions in packages.yml, then run dbt deps
+[0m00:48:30.938856 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.50614923, "process_in_blocks": "0", "process_kernel_time": 0.230441, "process_mem_max_rss": "104628", "process_out_blocks": "2928", "process_user_time": 1.864482}
+[0m00:48:30.939462 [debug] [MainThread]: Command `dbt deps` succeeded at 00:48:30.939356 after 0.51 seconds
+[0m00:48:30.939967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9166f50410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c9166e30080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c91676a3380>]}
+[0m00:48:30.940478 [debug] [MainThread]: Flushing usage events
+[0m00:48:31.018219 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:48:52.927370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ead91c7e930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ead9365db80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ead93450740>]}
+
+
+============================== 00:48:52.931057 | 392c1e34-8002-4ab9-9858-8d4f1222075a ==============================
+[0m00:48:52.931057 [info ] [MainThread]: Running with dbt=1.10.13
+[0m00:48:52.931783 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'partial_parse': 'True', 'log_path': '/workspaces/astro-cli-codespaces/include/logs', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'log_format': 'default', 'empty': 'None', 'invocation_command': 'dbt debug', 'profiles_dir': '/home/codespace/.dbt', 'use_colors': 'True', 'target_path': 'None', 'warn_error': 'None', 'fail_fast': 'False', 'introspect': 'True', 'printer_width': '80', 'debug': 'False', 'quiet': 'False', 'no_print': 'None'}
+[0m00:48:52.942159 [info ] [MainThread]: dbt version: 1.10.13
+[0m00:48:52.942781 [info ] [MainThread]: python version: 3.12.1
+[0m00:48:52.943314 [info ] [MainThread]: python path: /usr/local/python/3.12.1/bin/python3
+[0m00:48:52.943820 [info ] [MainThread]: os info: Linux-6.8.0-1030-azure-x86_64-with-glibc2.31
+[0m00:48:53.627291 [info ] [MainThread]: Using profiles dir at /home/codespace/.dbt
+[0m00:48:53.628019 [info ] [MainThread]: Using profiles.yml file at /home/codespace/.dbt/profiles.yml
+[0m00:48:53.628568 [info ] [MainThread]: Using dbt_project.yml file at /workspaces/astro-cli-codespaces/include/dbt_project.yml
+[0m00:48:53.629301 [info ] [MainThread]: adapter type: snowflake
+[0m00:48:53.629800 [info ] [MainThread]: adapter version: 1.10.2
+[0m00:48:53.769445 [info ] [MainThread]: Configuration:
+[0m00:48:53.770207 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:48:53.770757 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:48:53.771263 [info ] [MainThread]: Required dependencies:
+[0m00:48:53.771761 [debug] [MainThread]: Executing "git --help"
+[0m00:48:53.774486 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:48:53.775158 [debug] [MainThread]: STDERR: "b''"
+[0m00:48:53.775597 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:48:53.776121 [info ] [MainThread]: Connection:
+[0m00:48:53.776592 [info ] [MainThread]:   account: VDFEINT-VW12473
+[0m00:48:53.777066 [info ] [MainThread]:   user: AIRBYTE_DEV
+[0m00:48:53.777514 [info ] [MainThread]:   database: LAB_PIPELINE
+[0m00:48:53.778023 [info ] [MainThread]:   warehouse: LAB_WH_AIRBYTE
+[0m00:48:53.778463 [info ] [MainThread]:   role: AIRBYTE_DEV
+[0m00:48:53.778907 [info ] [MainThread]:   schema: CORE
+[0m00:48:53.779343 [info ] [MainThread]:   authenticator: None
+[0m00:48:53.779763 [info ] [MainThread]:   oauth_client_id: None
+[0m00:48:53.780209 [info ] [MainThread]:   query_tag: None
+[0m00:48:53.780649 [info ] [MainThread]:   client_session_keep_alive: False
+[0m00:48:53.781101 [info ] [MainThread]:   host: None
+[0m00:48:53.781530 [info ] [MainThread]:   port: None
+[0m00:48:53.781970 [info ] [MainThread]:   proxy_host: None
+[0m00:48:53.782394 [info ] [MainThread]:   proxy_port: None
+[0m00:48:53.782828 [info ] [MainThread]:   protocol: None
+[0m00:48:53.783299 [info ] [MainThread]:   connect_retries: 1
+[0m00:48:53.783732 [info ] [MainThread]:   connect_timeout: None
+[0m00:48:53.784176 [info ] [MainThread]:   retry_on_database_errors: False
+[0m00:48:53.784603 [info ] [MainThread]:   retry_all: False
+[0m00:48:53.785052 [info ] [MainThread]:   insecure_mode: False
+[0m00:48:53.785474 [info ] [MainThread]:   reuse_connections: True
+[0m00:48:53.785920 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m00:48:53.786550 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m00:48:53.943435 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m00:48:53.973632 [debug] [MainThread]: Using snowflake connection "debug"
+[0m00:48:53.974250 [debug] [MainThread]: On debug: select 1 as id
+[0m00:48:53.974725 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:48:55.142555 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.168 seconds
+[0m00:48:55.143900 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:48:55.144552 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:48:55.145839 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 2.285194, "process_in_blocks": "0", "process_kernel_time": 1.049062, "process_mem_max_rss": "229288", "process_out_blocks": "32", "process_user_time": 2.68416}
+[0m00:48:55.146494 [debug] [MainThread]: Command `dbt debug` succeeded at 00:48:55.146378 after 2.29 seconds
+[0m00:48:55.146971 [debug] [MainThread]: Connection 'debug' was left open.
+[0m00:48:55.147445 [debug] [MainThread]: On debug: Close
+[0m00:48:55.431653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ead90c71640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ead6ea3fc20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ead9365db80>]}
+[0m00:48:55.432389 [debug] [MainThread]: Flushing usage events
+[0m00:48:55.485205 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:49:01.945526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1db4a9a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1dbb85760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1dbb84950>]}
+
+
+============================== 00:49:01.949317 | bd2ac6cf-553e-4955-be20-e48dfeec5959 ==============================
+[0m00:49:01.949317 [info ] [MainThread]: Running with dbt=1.10.13
+[0m00:49:01.950035 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'target_path': 'None', 'use_colors': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt run', 'no_print': 'None', 'printer_width': '80', 'indirect_selection': 'eager', 'quiet': 'False', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/astro-cli-codespaces/include/logs', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/codespace/.dbt', 'empty': 'False'}
+[0m00:49:02.791677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1bca2ba70>]}
+[0m00:49:02.867771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1db382b40>]}
+[0m00:49:02.869006 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m00:49:03.050927 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m00:49:03.125434 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m00:49:03.126118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1db456ff0>]}
+[0m00:49:04.614645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1af701dc0>]}
+[0m00:49:04.677151 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/astro-cli-codespaces/include/target/manifest.json
+[0m00:49:04.679464 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/astro-cli-codespaces/include/target/semantic_manifest.json
+[0m00:49:04.698201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1bc6ffb60>]}
+[0m00:49:04.698905 [info ] [MainThread]: Found 1 model, 615 macros
+[0m00:49:04.699449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1af7806b0>]}
+[0m00:49:04.701338 [info ] [MainThread]: 
+[0m00:49:04.701876 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:49:04.702348 [info ] [MainThread]: 
+[0m00:49:04.703046 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:49:04.704178 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LAB_PIPELINE'
+[0m00:49:04.749111 [debug] [ThreadPool]: Using snowflake connection "list_LAB_PIPELINE"
+[0m00:49:04.749738 [debug] [ThreadPool]: On list_LAB_PIPELINE: show terse schemas in database LAB_PIPELINE
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "laboratorio_dbt", "target_name": "dev", "connection_name": "list_LAB_PIPELINE"} */
+[0m00:49:04.750266 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:49:06.014930 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.265 seconds
+[0m00:49:06.017648 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_LAB_PIPELINE, now list_LAB_PIPELINE_CORE)
+[0m00:49:06.031724 [debug] [ThreadPool]: Using snowflake connection "list_LAB_PIPELINE_CORE"
+[0m00:49:06.032316 [debug] [ThreadPool]: On list_LAB_PIPELINE_CORE: show objects in LAB_PIPELINE.CORE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "laboratorio_dbt", "target_name": "dev", "connection_name": "list_LAB_PIPELINE_CORE"} */;
+[0m00:49:06.222841 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.190 seconds
+[0m00:49:06.226938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1af7805c0>]}
+[0m00:49:06.229539 [debug] [Thread-1 (]: Began running node model.laboratorio_dbt.hello
+[0m00:49:06.230231 [info ] [Thread-1 (]: 1 of 1 START sql view model CORE.hello ......................................... [RUN]
+[0m00:49:06.230821 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_LAB_PIPELINE_CORE, now model.laboratorio_dbt.hello)
+[0m00:49:06.231348 [debug] [Thread-1 (]: Began compiling node model.laboratorio_dbt.hello
+[0m00:49:06.240097 [debug] [Thread-1 (]: Writing injected SQL for node "model.laboratorio_dbt.hello"
+[0m00:49:06.240955 [debug] [Thread-1 (]: Began executing node model.laboratorio_dbt.hello
+[0m00:49:06.274543 [debug] [Thread-1 (]: Writing runtime sql for node "model.laboratorio_dbt.hello"
+[0m00:49:06.275747 [debug] [Thread-1 (]: Using snowflake connection "model.laboratorio_dbt.hello"
+[0m00:49:06.276390 [debug] [Thread-1 (]: On model.laboratorio_dbt.hello: create or replace   view LAB_PIPELINE.CORE.hello
+  
+  
+  
+  
+  as (
+    select 'ok' as status
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "laboratorio_dbt", "target_name": "dev", "node_id": "model.laboratorio_dbt.hello"} */;
+[0m00:49:06.716841 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.440 seconds
+[0m00:49:06.747757 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bd2ac6cf-553e-4955-be20-e48dfeec5959', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1dbbae2a0>]}
+[0m00:49:06.749048 [info ] [Thread-1 (]: 1 of 1 OK created sql view model CORE.hello .................................... [[32mSUCCESS 1[0m in 0.52s]
+[0m00:49:06.750303 [debug] [Thread-1 (]: Finished running node model.laboratorio_dbt.hello
+[0m00:49:06.752229 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:49:06.752707 [debug] [MainThread]: Connection 'model.laboratorio_dbt.hello' was left open.
+[0m00:49:06.753227 [debug] [MainThread]: On model.laboratorio_dbt.hello: Close
+[0m00:49:07.074907 [info ] [MainThread]: 
+[0m00:49:07.075624 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.37 seconds (2.37s).
+[0m00:49:07.076592 [debug] [MainThread]: Command end result
+[0m00:49:07.101754 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/astro-cli-codespaces/include/target/manifest.json
+[0m00:49:07.103779 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/astro-cli-codespaces/include/target/semantic_manifest.json
+[0m00:49:07.110208 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/astro-cli-codespaces/include/target/run_results.json
+[0m00:49:07.110693 [info ] [MainThread]: 
+[0m00:49:07.111307 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:49:07.111795 [info ] [MainThread]: 
+[0m00:49:07.112339 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:49:07.113528 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.2320294, "process_in_blocks": "0", "process_kernel_time": 1.151318, "process_mem_max_rss": "239540", "process_out_blocks": "3944", "process_user_time": 4.674235}
+[0m00:49:07.114140 [debug] [MainThread]: Command `dbt run` succeeded at 00:49:07.114033 after 5.23 seconds
+[0m00:49:07.114614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1be3c4080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1bc6f9be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a1bc6c7dd0>]}
+[0m00:49:07.115120 [debug] [MainThread]: Flushing usage events
+[0m00:49:07.163911 [debug] [MainThread]: An error was encountered while trying to flush usage events
