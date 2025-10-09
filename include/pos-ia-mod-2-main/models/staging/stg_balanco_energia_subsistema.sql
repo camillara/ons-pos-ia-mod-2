@@ -45,7 +45,9 @@ with raw as (
     from {{ source('raw_ons', 'BALANCO_ENERGIA_SUBSISTEMA_2025') }}
 )
 
-select
+select *
+from (
+  select
     VAL_CARGA,
     DIN_INSTANTE,
     VAL_GERSOLAR,
@@ -55,5 +57,12 @@ select
     VAL_GERTERMICA,
     VAL_INTERCAMBIO,
     VAL_GERHIDRAULICA,
-    ano_referencia
-from raw
+    ano_referencia,
+    row_number() over (
+      partition by ID_SUBSISTEMA, DIN_INSTANTE
+      order by ano_referencia desc
+    ) as rn
+  from raw
+)
+where rn = 1
+

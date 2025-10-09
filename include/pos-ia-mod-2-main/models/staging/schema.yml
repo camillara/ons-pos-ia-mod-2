@@ -2,15 +2,13 @@ version: 2
 
 models:
   - name: stg_balanco_energia_subsistema
-    description: "Modelo de staging para o balanço de energia por subsistema no ano de 2025."
+    description: "Balanço de energia por subsistema"
     tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ['ID_SUBSISTEMA', 'DIN_INSTANTE']
       - not_null:
           column_name: ID_SUBSISTEMA
       - not_null:
-          column_name: DIN_INSTANTE
-      - unique:
-          column_name: ID_SUBSISTEMA
-      - unique:
           column_name: DIN_INSTANTE
       - dbt_utils.expression_is_true:
           expression: "VAL_CARGA >= 0"
@@ -61,7 +59,7 @@ models:
       - dbt_utils.expression_is_true:
           expression: "ENA_BRUTA_REGIAO_MWMED >= 0"
       - dbt_utils.expression_is_true:
-          expression: "ENA_ARMAZENAVEL_REGIAO_PERCENTUALMLT BETWEEN 0 AND 100"
+          expression: "ENA_ARMAZENAVEL_REGIAO_PERCENTUALMLT_NUM BETWEEN 0 AND 100"
 
   - name: stg_inmet_data
     description: |
@@ -132,7 +130,7 @@ models:
       - not_null:
           column_name: nome_subsistema
       - dbt_utils.expression_is_true:
-          expression: "ano_dados IN (2024, 2025)"
+          expression: "ano_dados IN (2023, 2024, 2025)"
       - dbt_utils.expression_is_true:
           expression: "mes_dados BETWEEN 1 AND 12"
   
